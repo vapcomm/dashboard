@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="viewModel"
+            type="online.vapcom.dashboard.viewmodels.DashboardViewModel" />
+
+    </data>
+
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    android:id="@+id/dashboard"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackgroundDark"
+    tools:context=".ui.DashboardActivity">
+
+    <online.vapcom.dashboard.ui.SpeedometerView
+        android:id="@+id/speed"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:textAppearance="@style/NumbersText"
+        android:visibility="visible"
+
+        app:bigMarksColor="#AAE8FF"
+        app:bigMarksWidth="4dp"
+        app:smallMarksColor="#3B6FBF"
+        app:smallMarksWidth="2dp"
+        app:rimColor="#BABABA"
+        app:maxSpeed="260"
+        app:speed="@{viewModel.speed}"
+        />
+
+
+    <online.vapcom.dashboard.ui.TachometerView
+        android:id="@+id/tachometer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:textAppearance="@style/NumbersText"
+        android:visibility="invisible"
+        android:alpha="0"
+
+        app:rimColor="#FFFFFF"
+        app:maxRPM="7000"
+        app:rpm="@{viewModel.rpm}"
+        />
+
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+    </layout>

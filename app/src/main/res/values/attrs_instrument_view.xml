@@ -1,0 +1,30 @@
+<resources>
+    <declare-styleable name="InstrumentView">
+        <!-- цвета шкал и внешнего кольца -->
+        <attr name="bigMarksColor" format="color" />
+        <attr name="smallMarksColor" format="color" />
+        <attr name="rimColor" format="color" />
+
+        <!-- толщина линий отметок -->
+        <attr name="bigMarksWidth" format="dimension" />
+        <attr name="smallMarksWidth" format="dimension" />
+
+        <!-- параметры текста, из них поддерживаются только fontFamily и android:textColor
+             размер символов вычисляется автоматически в зависимости от размера виджета -->
+        <attr name="android:textAppearance" format="reference" />
+
+        <!-- максимальная скорость на спидометре, должна быть кратна 20 км/ч -->
+        <attr name="maxSpeed" format="integer" />
+
+        <!-- текущая скорость на спидометре -->
+        <attr name="speed" format="integer" />
+
+        <!-- максимальные обороты на тахометре, должны быть кратными 1000 -->
+        <attr name="maxRPM" format="integer" />
+
+        <!-- текущие обороты -->
+        <attr name="rpm" format="integer" />
+
+    </declare-styleable>
+
+</resources>

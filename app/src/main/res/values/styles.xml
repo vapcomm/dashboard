@@ -1,0 +1,38 @@
+<resources>
+
+    <!-- Основная тема приложения -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorOnPrimary">@color/colorOnPrimary</item>
+
+        <item name="alertDialogTheme">@style/AlertDialogCustom</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.MaterialComponents.ActionBar" >
+        <!-- цвет фона -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <!-- цвет title -->
+        <item name="android:textColorPrimary">@color/colorTextDarkGray</item>
+        <!-- цвет стрелки UP -->
+        <item name="colorControlNormal">@color/colorTextDarkGray</item>
+    </style>
+
+    <!-- стиль меню тулбара -->
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.MaterialComponents.Light" />
+
+    <!--  Диалоги, меняем цвет кнопок -->
+    <style name="AlertDialogCustom" parent="ThemeOverlay.MaterialComponents.Dialog.Alert">
+        <item name="colorPrimary">@color/colorTextDarkGray</item>
+    </style>
+
+    <style name="NumbersText" parent="@android:style/TextAppearance.Material.Body1">
+        <item name="android:textColor">@color/colorWhite</item>
+        <!-- это для примера того, что в приборах можно изменять шрифт надписей
+        <item name="fontFamily">serif-monospace</item> -->
+    </style>
+
+
+
+</resources>
